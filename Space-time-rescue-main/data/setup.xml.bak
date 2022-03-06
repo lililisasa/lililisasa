@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GAMEDATA>
+    <!--VERSION為版本編號，請核對與遊戲檔左下角的遊戲編號相同，不然無法執行-->
+    <CODE VERSION="1.0.4" />
+
+    <!--INITIAL 初始設定，X為角色初始X坐標；Y為角色初始X坐標；DIRECT為角色面向方位；ALPHA為OBJECT區塊透明度，完全透明=0；COORDINATE為遊戲內顯示坐標；TITLE為遊戲上方文字橫幅；TIMELIMIT為遊戲時間限制，時間歸零時會進入FAILPAGE，單位秒；TEMPLATEIMAGE為背景樣版圖，大小為1024*768；MAINSOUND為遊戲開始時音樂-->
+    <INITIAL X="50" Y="51" DIRECT="E" ALPHA="0" COORDINATE="true" TITLE="時空救援" TIMELIMIT="48000000000000" TEMPLATEIMAGE="image\template\template.jpg" MAINSOUND="sounds\nER2.mp3" MAGNIFIER="image\magnifier\magnifier.jpg" />
+
+    <!--TITLEPAGE 遊戲開始前劇情頁，可新增與刪減頁面，最少為一頁，圖大小為1024*768-->
+    <TITLEPAGE>
+        <PAGE IMAGE="image\titlepage\封面.png" />
+        <PAGE IMAGE="image\titlepage\劇情1.png" />
+        <PAGE IMAGE="image\titlepage\劇情2.png" />
+        <PAGE IMAGE="image\titlepage\劇情3.png" />
+
+    </TITLEPAGE>
+
+    <!--SUCCESSPAGE 成功頁，觸發成功OBJECT，圖大小為1024*768，只有一頁-->
+    <SUCCESSPAGE>
+        <PAGE IMAGE="image\successpage\成功.png" />
+    </SUCCESSPAGE>
+
+    <!--FAILPAGE 失敗頁，遊戲時間歸零或觸發失敗OBJECT，圖大小為1024*768，只有一頁-->
+    <FAILPAGE>
+        <PAGE IMAGE="image\failpage\失敗.png" />
+    </FAILPAGE>
+
+
+    <!--SCREEN 場景，ID=X坐標_Y坐標方向，ID編號不能重複，圖大小為800*600，FRONT、LEFT、RIGHT、BACK為四方向箭頭可否運作，true為是、false為否-->
+    <SCREEN ID="49_47N" IMAGE="image\screen\工具間.jpg" FRONT="false" LEFT="false" RIGHT="false" BACK="true" INFO="這裡有什麼東西嗎?" />
+    <SCREEN ID="49_48N" IMAGE="image\screen\甲板.jpg" FRONT="false" LEFT="false" RIGHT="true" BACK="true" INFO="地上那個是個門嗎? 去看看吧!" />
+    <SCREEN ID="49_48E" IMAGE="image\screen\船長控制室方向.jpg" FRONT="true" LEFT="true" RIGHT="false" BACK="false" INFO="原來控制室在這裡啊! 去看看吧!" />
+    <SCREEN ID="49_49N" IMAGE="image\screen\走廊0.jpg" FRONT="true" LEFT="false" RIGHT="true" BACK="true" INFO="右邊是交誼廳，裡面會有有關伏打電池的書嗎?" />
+    <SCREEN ID="49_49E" IMAGE="image\screen\交誼廳門.png" FRONT="true" LEFT="true" RIGHT="false" BACK="false" INFO="進去看看吧!" />
+    <SCREEN ID="49_50N" IMAGE="image\screen\走廊1.jpg" FRONT="true" LEFT="false" RIGHT="true" BACK="true" INFO="右邊是別人的房間，好像沒有上鎖，要闖進去嗎?" />
+    <SCREEN ID="49_50E" IMAGE="image\screen\房間門.png" FRONT="true" LEFT="true" RIGHT="false" BACK="false" INFO="進去看看吧!" />
+    <SCREEN ID="49_51N" IMAGE="image\screen\走廊2.jpg" FRONT="true" LEFT="false" RIGHT="true" BACK="true" INFO="右邊是我的房間" />
+    <SCREEN ID="49_51E" IMAGE="image\screen\臥室門.png" FRONT="true" LEFT="true" RIGHT="false" BACK="false" />
+    <SCREEN ID="49_52N" IMAGE="image\screen\走廊3.jpg" FRONT="true" LEFT="false" RIGHT="true" BACK="false" INFO="右邊是餐廳，裡面會有我需要的東西嗎?"/>
+    <SCREEN ID="49_52E" IMAGE="image\screen\餐廳門.png" FRONT="true" LEFT="true" RIGHT="false" BACK="false" INFO="進去看看吧!" />
+    <SCREEN ID="50_48E" IMAGE="image\screen\船長控制室大門(開).jpg" FRONT="true" LEFT="false" RIGHT="false" BACK="true" INFO="進去看看吧!" />
+    <SCREEN ID="50_49E" IMAGE="image\screen\交誼廳.jpg" FRONT="false" LEFT="false" RIGHT="false" BACK="true" INFO="這裡有什麼東西嗎?" />
+    <SCREEN ID="51_49E" IMAGE="image\screen\實驗桌.jpg" FRONT="false" LEFT="false" RIGHT="false" BACK="true" />
+    <SCREEN ID="50_50E" IMAGE="image\screen\房間1.jpg" FRONT="false" LEFT="false" RIGHT="false" BACK="true" INFO="這裡有什麼東西嗎?" />
+    <SCREEN ID="50_51E" IMAGE="image\screen\房間2.jpg" FRONT="false" LEFT="false" RIGHT="false" BACK="true" />
+    <SCREEN ID="50_52E" IMAGE="image\screen\餐廳.jpg" FRONT="false" LEFT="false" RIGHT="false" BACK="true" INFO="這裡有什麼東西嗎?" />
+    <SCREEN ID="51_48E" IMAGE="image\screen\船長控制室.jpg" FRONT="false" LEFT="false" RIGHT="false" BACK="true" INFO="這裡有什麼東西嗎?" />
+    <!-- 物件 -->
+    <!-- 1.前置步驟 -->
+    <!-- 工具間 -->
+    <OBJECT ID="49_47N-1" IMAGE="image\object\砂紙.png" DISAPPEAR="true" GETITEMID="10" INFO="是砂紙! 不過… 有什麼東西需要打磨嗎?">
+        <SCREEN ID="49_47N" X="568" Y="264" />
+    </OBJECT>
+    <OBJECT ID="49_47N-2" IMAGE="image\object\槌子.png" DISAPPEAR="true" GETITEMID="7" INFO="啊! 找到槌子了! 看起來可以敲碎任何東西呢。">
+        <SCREEN ID="49_47N" X="580" Y="270" />
+    </OBJECT>
+    <OBJECT ID="49_47N-3" IMAGE="image\object\剪刀.png" DISAPPEAR="true" GETITEMID="5" INFO="噢! 是剪刀! 也太利了吧! 要小心使用才行呢!">
+        <SCREEN ID="49_47N" X="700" Y="270" />
+    </OBJECT>
+    <!-- 交誼廳 -->
+    <OBJECT ID="50_49E-0" W="230" H="130" SCREENID="51_49E" INFO="嗯… 這裡感覺可以當作操作台">
+        <SCREEN ID="50_49E" X="286" Y="272" />
+    </OBJECT>
+    <OBJECT ID="50_49E-1" W="290" H="111" OSCREENID="50_49E" OBJECTID="50_49E-2" OBJECTX="0" OBJECTY="0" INFO="這裡果然有書，讓我看看...">
+        <SCREEN ID="50_49E" X="0" Y="170" />
+    </OBJECT>
+    <OBJECT ID="50_49E-2" IMAGE="image\object\書.png" DISAPPEAR="true"></OBJECT>
+    <!-- 房間102 -->
+    <OBJECT ID="50_50E-1" IMAGE="image\object\撲滿1.png" TOKEN="07" TC_DISAPPEAR="true" TC_CONSUME="true" TC_OSCREENID="50_50E" TC_OBJECTID="50_50E-2" TC_OBJECTX="690" TC_OBJECTY="400" INFO="這麼堅固的撲滿，需要槌子敲開">
+        <SCREEN ID="50_50E" X="710" Y="400" />
+    </OBJECT>
+    <OBJECT ID="50_50E-2" IMAGE="image\object\撲滿2.png" DISAPPEAR="true" GETITEMID="1" OSCREENID="50_50E" OBJECTID="50_50E-3" OBJECTX="0" OBJECTY="0" INFO="啊～原來這裡有鋅幣呢!"></OBJECT>
+    <OBJECT ID="50_50E-3" IMAGE="image\object\撲滿3.png" DISAPPEAR="true"></OBJECT>
+    <!-- 房間101 -->
+	<OBJECT ID="50_51E-1" IMAGE="image\object\小地圖.png" OSCREENID="50_51E" OBJECTID="50_51E-2" OBJECTX="0" OBJECTY="0">
+        <SCREEN ID="50_51E" X="363" Y="188" />
+    </OBJECT>
+    <OBJECT ID="50_51E-2" IMAGE="image\object\地圖.png" DISAPPEAR="true"  INFO="噢! 是地圖呢! 讓我看看這艘船上都有哪些地方"></OBJECT>
+    <!-- 餐廳 -->
+    <OBJECT ID="50_52E-1" IMAGE="image\object\醋.png" DISAPPEAR="true" GETITEMID="9" INFO="找到一瓶醋，噢 對了! 醋是電解質對吧!">
+        <SCREEN ID="50_52E" X="430" Y="300" />
+    </OBJECT>
+    <OBJECT ID="50_52E-2" IMAGE="image\object\抹布.png" DISAPPEAR="true" GETITEMID="4" INFO="是條抹布，感覺吸水能力不錯呢!">
+        <SCREEN ID="50_52E" X="336" Y="350" />
+    </OBJECT>
+    <!-- 甲板 -->
+    <OBJECT ID="49_48N-1" W="156" H="93" SCREENID="49_47N">
+        <SCREEN ID="49_48N" X="315" Y="435" />
+    </OBJECT>
+    <!-- 船長控制室 -->
+    <OBJECT ID="51_48E-1" IMAGE="image\object\鑰匙.png" DISAPPEAR="true" GETITEMID="11" INFO="這裡有鑰匙!也對，回到過去後船長室若是關著的我就完蛋了">
+        <SCREEN ID="51_48E" X="123" Y="226" />
+    </OBJECT>
+    <OBJECT ID="51_48E-2" W="120" H="120" END="success"></OBJECT>
+    <!-- 船長控制室大門 -->
+    <OBJECT ID="50_48E-1" W="290" H="530" TOKEN="11" TC_DISAPPEAR="true" TC_CONSUME="true" TC_OSCREENID="51_48E" TC_OBJECTID="51_48E-2" TC_OBJECTX="290" TC_OBJECTY="340" TC_ISCREENID="50_48E" TC_SCREENIMAGE="image\screen\船長控制室大門(開).jpg" TC_MSCREENID="50_48E" TC_SCREENMOTION="FRONT" TC_MOTIONVALUE="true" INFO="鎖住了，我有帶到鑰匙嗎?" TC_INFO="幸好有帶呢，現在只要把船偏離航線就可以了~"></OBJECT>
+    <!-- 2.實驗步驟 -->
+    <!-- 裝電池 -->
+    <OBJECT ID="51_49E-12" W="800" H="600" TOKEN="12" TC_DISAPPEAR="true" TC_CONSUME="true" TC_ISCREENID="51_49E" TC_SCREENIMAGE="image\object\3-1.png" TC_OSCREENID="51_49E" TC_OBJECTID="51_49E-13" TC_OBJECTX="0" TC_OBJECTY="0" TC_INFO="接上電池試試看">
+        <SCREEN ID="51_49E" X="0" Y="0" />
+    </OBJECT>
+    <OBJECT ID="51_49E-13" W="800" H="600" TOKEN="13" TC_DISAPPEAR="true" TC_CONSUME="true" TC_ISCREENID="51_49E" TC_SCREENIMAGE="image\object\3-2.png" TC_OSCREENID="51_49E" TC_OBJECTID="51_49E-15" TC_OBJECTX="0" TC_OBJECTY="0" TC_INFO="成功了!! 只要按一下就可以回到過去了呢!"></OBJECT>
+    <OBJECT ID="51_49E-15" DISAPPEAR="true" OSCREENID="50_48E" OBJECTID="50_48E-1" OBJECTX="450" OBJECTY="0" ISCREENID="50_48E" SCREENIMAGE="image\screen\船長控制室大門(關).jpg" MSCREENID="50_48E" SCREENMOTION="FRONT" MOTIONVALUE="false" INFO="呼~終於回到撞山前了! 趕快到船長控制室吧!!"></OBJECT>
+    <!-- 組電池 -->
+    <OBJECT ID="51_49E-5" W="800" H="600" TOKEN="02" TC_DISAPPEAR="true" TC_CONSUME="true" TC_ISCREENID="51_49E" TC_SCREENIMAGE="image\object\2-1.png" TC_OSCREENID="51_49E" TC_OBJECTID="51_49E-6" TC_OBJECTX="0" TC_OBJECTY="0" TC_INFO="銅幣放好了，鋅幣呢?">
+        <SCREEN ID="51_49E" X="0" Y="0" />
+    </OBJECT>
+    <OBJECT ID="51_49E-6" W="800" H="600" TOKEN="01" TC_DISAPPEAR="true" TC_CONSUME="true" TC_ISCREENID="51_49E" TC_SCREENIMAGE="image\object\2-2.png" TC_OSCREENID="51_49E" TC_OBJECTID="51_49E-7" TC_OBJECTX="0" TC_OBJECTY="0" TC_INFO="硬幣看起來髒髒的，有沒有酸性溶液呢?"></OBJECT>
+    <OBJECT ID="51_49E-7" W="800" H="600" TOKEN="09" TC_DISAPPEAR="true" TC_CONSUME="true" TC_ISCREENID="51_49E" TC_SCREENIMAGE="image\object\2-3.png" TC_OSCREENID="51_49E" TC_OBJECTID="51_49E-8" TC_OBJECTX="0" TC_OBJECTY="0" TC_INFO="髒污被清掉了，接下來還要打磨一下"></OBJECT>
+    <OBJECT ID="51_49E-8" W="800" H="600" TOKEN="10" TC_DISAPPEAR="true" TC_CONSUME="true" TC_ISCREENID="51_49E" TC_SCREENIMAGE="image\object\2-4.png" TC_OSCREENID="51_49E" TC_OBJECTID="51_49E-9" TC_OBJECTX="0" TC_OBJECTY="0" TC_INFO="哇~亮晶晶的，接下來放上剛才做好的抹布塊了"></OBJECT>
+    <OBJECT ID="51_49E-9" W="800" H="600" TOKEN="042" TC_DISAPPEAR="true" TC_CONSUME="true" TC_ISCREENID="51_49E" TC_SCREENIMAGE="image\object\2-5.png" TC_OSCREENID="51_49E" TC_OBJECTID="51_49E-10" TC_OBJECTX="0" TC_OBJECTY="0" TC_INFO="小電池電壓不夠，我需要把他們串聯起來(點擊畫面繼續)"></OBJECT>
+    <OBJECT ID="51_49E-10" W="800" H="600" DISAPPEAR="true" ISCREENID="51_49E" SCREENIMAGE="image\screen\實驗桌.jpg" OSCREENID="51_49E" OBJECTID="51_49E-11" OBJECTX="0" OBJECTY="0" INFO="把電池先拿起來吧~等等，這個電力只能讓我傳送一次，我必須把所有東西都帶齊，再檢查一下有沒有東西漏帶好了"></OBJECT>
+    <!-- <OBJECT ID="51_49E-11" H="200" W="200" GETITEMID="13" OSCREENID="51_49E" ISCREENID="51_49E" SCREENIMAGE="image\screen\實驗桌.jpg" OBJECTID="51_49E-12" OBJECTX="200" OBJECTY="200" DISAPPEAR="true"></OBJECT> -->
+    <OBJECT ID="51_49E-11" IMAGE="image\object\2-6.png" DISAPPEAR="true" GETITEMID="13" INFO="準備放上時光機了"></OBJECT>
+    <!-- 抹布 -->
+    <OBJECT ID="51_49E-1" W="800" H="600" TOKEN="04" TC_DISAPPEAR="true" TC_CONSUME="true" TC_ISCREENID="51_49E" TC_SCREENIMAGE="image\object\1-1.png" TC_OSCREENID="51_49E" TC_OBJECTID="51_49E-2" TC_OBJECTX="0" TC_OBJECTY="0" TC_INFO="抹布放好了，有沒有電解質溶液呢?">
+        <SCREEN ID="51_49E" X="0" Y="0" />
+    </OBJECT>
+    <OBJECT ID="51_49E-2" W="800" H="600" TOKEN="09" TC_DISAPPEAR="true" TC_CONSUME="false" TC_ISCREENID="51_49E" TC_SCREENIMAGE="image\object\1-2.png" TC_OSCREENID="51_49E" TC_OBJECTID="51_49E-3" TC_OBJECTX="0" TC_OBJECTY="0" TC_INFO="拿醋當電解質溶液應該可以吧...接下來要怎麼分成好多塊呢?"></OBJECT>
+    <OBJECT ID="51_49E-3" W="800" H="600" TOKEN="05" TC_DISAPPEAR="true" TC_CONSUME="true" TC_ISCREENID="51_49E" TC_SCREENIMAGE="image\screen\實驗桌.jpg" TC_OSCREENID="51_49E" TC_OBJECTID="51_49E-4" TC_OBJECTX="0" TC_OBJECTY="0" TC_INFO="好了，先收起來吧"></OBJECT>
+    <!-- <OBJECT ID="51_49E-4" W="442" H="284" GETITEMID="42" OSCREENID="51_49E" ISCREENID="51_49E" SCREENIMAGE="image\screen\實驗桌.jpg" OBJECTID="51_49E-5" OBJECTX="200" OBJECTY="200" DISAPPEAR="true"></OBJECT> -->
+    <OBJECT ID="51_49E-4" IMAGE="image\object\1-3.png" DISAPPEAR="true" OSCREENID="51_49E" OBJECTID="51_49E-5" OBJECTX="300" OBJECTY="300" GETITEMID="42" INFO="再來處理硬幣吧，先放銅幣好了"></OBJECT>
+
+    <!-- ORIGINALITEM 為初始物品設定區段，遊戲一開始時即擁有的物品，ID必須使用ITEM已存在之ID，可新增與刪減 -->
+    <!-- <ORIGINALITEM ID="1" /> -->
+    <ORIGINALITEM ID="2" />
+    <ORIGINALITEM ID="12" />
+
+    <!--ITEM ID="0" 此段為無物品時底圖，絕不能刪除，但可以更換底圖，大小為70*70-->
+    <ITEM ID="0" IMAGE="image\item\NoItem.png" />
+
+    <!--ITEM 此段為物品設定區段，ID編號不能重複，有IMAGE、TOKEN與INFO等參數，可新增與刪減，圖大小為70*70-->
+    <ITEM ID="1" IMAGE="image\item\鋅錢.png" TOKEN="01" INFO="鋅製的錢幣" />
+    <ITEM ID="2" IMAGE="image\item\銅錢.png" TOKEN="02" INFO="銅製的錢幣" />
+    <ITEM ID="4" IMAGE="image\item\抹布.png" TOKEN="04" INFO="抹布" />
+    <ITEM ID="42" IMAGE="image\item\剪好的抹布.png" TOKEN="042" INFO="剪成碎片的抹布-用醋沾濕後可以導電" />
+    <ITEM ID="5" IMAGE="image\item\剪刀.png" TOKEN="05" INFO="剪刀" />
+    <ITEM ID="7" IMAGE="image\item\槌子.png" TOKEN="07" INFO="槌子" />
+    <ITEM ID="9" IMAGE="image\item\醋.png" TOKEN="09" INFO="醋-是酸性電解質溶液" />
+    <ITEM ID="10" IMAGE="image\item\砂紙.png" TOKEN="10" INFO="砂紙" />
+    <ITEM ID="11" IMAGE="image\item\鑰匙.png" TOKEN="11" INFO="控制室的鑰匙" />
+    <ITEM ID="12" IMAGE="image\item\時空腰帶.png" TOKEN="12" INFO="時光機-可以在現在和過去之間切換，但目前沒電了" />
+    <ITEM ID="13" IMAGE="image\item\電池堆.png" TOKEN="13" INFO="疊好的電池" />
+
+</GAMEDATA>
